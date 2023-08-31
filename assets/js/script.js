@@ -9,9 +9,9 @@ Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzion
 // due prompt utente per pari e dispari e numero
 
 const userChoose  = prompt('choose pari o dispari');
-const userNumber = prompt('type a number between 1 and 5');
+const userNumber = Number(prompt('type a number between 1 and 5'));
 
-console.log(userChoose + userNumber);
+console.log('hai scelto  ' + userChoose + ' e il tuo numero è  ' + userNumber);
 
 // generiamo un numero random per il pc(funzione)
 
@@ -23,11 +23,18 @@ function randomPc() {
     
 }
 
-let pcNumber = randomPc();
-console.log(pcNumber);
+let pcNumber = Number(randomPc());
 
 //user number + pc number
 
+function isEven(num1, num2) {
+
+    const sum = num1 + num2;
+    return sum;
+    
+}
+
+console.log(isEven(userNumber, pcNumber));
 
 
 
