@@ -12,6 +12,7 @@ const userChoose  = prompt('choose pari o dispari');
 const userNumber = Number(prompt('type a number between 1 and 5'));
 
 console.log('hai scelto  ' + userChoose + ' e il tuo numero è  ' + userNumber);
+document.getElementById('user_info').innerHTML = 'hai scelto  ' + userChoose + ' e il tuo numero è  ' + userNumber
 
 // generiamo un numero random per il pc(funzione)
 
@@ -19,6 +20,7 @@ function randomPc() {
 
     let pcNumber = Math.floor((Math.random() * 5) + 1);
     console.log('il numero generato dal pc è' + '  ' + pcNumber);
+    document.getElementById('pc_info').innerHTML = 'il numero generato dal pc è' + '  ' + pcNumber
     return pcNumber;
     
 }
@@ -29,6 +31,7 @@ let pcNumber = Number(randomPc());
 
 let sum = userNumber + pcNumber;
 console.log('la somma dei due numeri è  ' + sum);
+document.getElementById('sum_both').innerHTML = 'la somma dei due numeri è  ' + sum
 
 //stabiliamo se la somma è pari o dispari(funzione)
 
@@ -51,9 +54,11 @@ function isEven() {
 if (isEven() === userChoose) {
 
     console.log('Il giocatore vince');
+    document.getElementById('winner').innerHTML = 'Il giocatore vince'
 
 } else {
 
     console.log('il pc vince');
+    document.getElementById('winner').innerHTML = 'Il pc vince'
 
 }
