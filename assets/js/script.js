@@ -15,18 +15,22 @@ console.log(userChoose + userNumber);
 
 // generiamo un numero random per il pc(funzione)
 
-function pcNumber() {
+function randomPc() {
 
-    let random = Math.floor((Math.random() * 5) + 1);
-    console.log(random);
-    return random;
+    let pcNumber = Math.floor((Math.random() * 5) + 1);
+    console.log('il numero generato dal pc è' + '  ' + pcNumber);
+    return pcNumber;
     
 }
 
-//userNumber + pcNumber
+let pcNumber = randomPc();
+console.log(pcNumber);
 
-let sum = userNumber + random;
-console.log(sum);
+//user number + pc number
+
+
+
+
 
 //stabiliamo se la somma è pari o dispari(funzione)
 
