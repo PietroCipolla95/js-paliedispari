@@ -11,14 +11,14 @@ Dichiariamo chi ha vinto.
 
 // due prompt utente per pari e dispari e numero
 
-/* const userChoose  = prompt('choose pari o dispari');
+const userChoose  = prompt('choose pari o dispari');
 const userNumber = Number(prompt('type a number between 1 and 5'));
 
 console.log('hai scelto  ' + userChoose + ' e il tuo numero è  ' + userNumber);
-document.getElementById('user_info').innerHTML = 'hai scelto  ' + userChoose + ' e il tuo numero è  ' + userNumber */
+document.getElementById('user_info').innerHTML = 'hai scelto  ' + userChoose + ' e il tuo numero è  ' + userNumber
 
 // generiamo un numero random per il pc(funzione)
-/* 
+
 function randomPc() {
 
     let pcNumber = Math.floor((Math.random() * 5) + 1);
@@ -28,17 +28,17 @@ function randomPc() {
     
 }
 
-let pcNumber = Number(randomPc()); */
+let pcNumber = Number(randomPc());
 
 //user number + pc number
 
-/* let sum = userNumber + pcNumber;
+let sum = userNumber + pcNumber;
 console.log('la somma dei due numeri è  ' + sum);
 document.getElementById('sum_both').innerHTML = 'la somma dei due numeri è  ' + sum
- */
+
 //stabiliamo se la somma è pari o dispari(funzione)
 
-/* function isEven() {
+function isEven() {
 
     let verifier;
 
@@ -50,11 +50,11 @@ document.getElementById('sum_both').innerHTML = 'la somma dei due numeri è  ' +
 
     return verifier = 'dispari';
     
-} */
+}
 
 //who wins?
 
-/* if (isEven() === userChoose) {
+if (isEven() === userChoose) {
 
     console.log('Il giocatore vince');
     document.getElementById('winner').innerHTML = 'Il giocatore vince'
@@ -64,7 +64,7 @@ document.getElementById('sum_both').innerHTML = 'la somma dei due numeri è  ' +
     console.log('il pc vince');
     document.getElementById('winner').innerHTML = 'Il pc vince'
 
-} */
+}
 
 
 /* 
@@ -75,24 +75,34 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 */
 
-const userWord = prompt('type a word')
+const userWord = prompt('type a word').toLowerCase();
 
 document.getElementById('word_choice').innerHTML = 'la parola scelta è ' + userWord;
 
-function reverseStr(word) {
+function reverseStr(userWord) {
 
-    let reverse = word.split('').reverse('').join('');
+    let reverse = userWord.split('').reverse('').join('');
 
-    if (reverse === word) {
+    let wordCheck;
 
-        document.getElementById('outcome').innerHTML = 'la parola è palindroma';
+    if (reverse === userWord) {
 
-    } else {
+        return wordCheck = true;        
 
-        document.getElementById('outcome').innerHTML = 'la parola non è palindroma';
+    } 
 
-    }
-    
+    return wordCheck = false;
+
+}
+
+if (reverseStr(userWord)) {
+
+    document.getElementById('outcome').innerHTML = 'la parola è palindroma';
+
+} else {
+
+    document.getElementById('outcome').innerHTML = 'la parola non è palindroma';
+
 }
 
 
@@ -103,8 +113,7 @@ function reverseStr(word) {
 
 
 
-
-
+ 
 
 
 
