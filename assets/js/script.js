@@ -27,18 +27,33 @@ let pcNumber = Number(randomPc());
 
 //user number + pc number
 
-function isEven(num1, num2) {
-
-    const sum = num1 + num2;
-    return sum;
-    
-}
-
-console.log(isEven(userNumber, pcNumber));
-
-
-
+let sum = userNumber + pcNumber;
+console.log('la somma dei due numeri è  ' + sum);
 
 //stabiliamo se la somma è pari o dispari(funzione)
 
+function isEven() {
+
+    let verifier;
+
+    if (sum % 2 === 0) {
+
+        return verifier = 'pari';              
+           
+    } 
+
+    return verifier = 'dispari';
+    
+}
+
 //who wins?
+
+if (isEven() === userChoose) {
+
+    console.log('Il giocatore vince');
+
+} else {
+
+    console.log('il pc vince');
+
+}
